@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function ConsultaCep() {
+export default function HomeCep() {
     const [erro, setErro] = useState("");
     const [endereco, setEndereco] = useState({
         cep: "",
@@ -51,16 +51,16 @@ export default function ConsultaCep() {
     }
 
     return (
-        <div>
-            <h2>Formulário de Endereço</h2>
-            <form className="flex flex-col gap-2">
-                <input type="text" name="cep" placeholder="CEP" value={endereco.cep} onChange={handleChange} onBlur={buscarCep}/>
+        <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+            <form className="w-full max-w-md bg-white p-6 rounded-xl shadow-md flex flex-col gap-3">
+                <h2 className="text-xl font-semibold text-center">Formulário CEP</h2>
+                <input className="rounded-md border border-gray-300 px-3 py-2 text-sm" type="text" name="cep" placeholder="CEP" value={endereco.cep} onChange={handleChange} onBlur={buscarCep}/>
                 {erro && (<p className="text-center text-sm text-red-500">{erro}</p>)}
-                <input type="text" name="rua" placeholder="Rua" value={endereco.rua} onChange={handleChange}/>
-                <input type="text" name="numero" placeholder="Número" value={endereco.numero} onChange={handleChange}/>
-                <input type="text" name="bairro" placeholder="Bairro" value={endereco.bairro} onChange={handleChange}/>
-                <input type="text" name="cidade" placeholder="Cidade" value={endereco.cidade}onChange={handleChange}/>
-                <input type="text" name="estado" placeholder="Estado" value={endereco.estado} onChange={handleChange}/>
+                <input className="rounded-md border border-gray-300 px-3 py-2 text-sm" type="text" name="rua" placeholder="Rua" value={endereco.rua} onChange={handleChange}/>
+                <input className="rounded-md border border-gray-300 px-3 py-2 text-sm" type="text" name="numero" placeholder="Número" value={endereco.numero} onChange={handleChange}/>
+                <input className="rounded-md border border-gray-300 px-3 py-2 text-sm" type="text" name="bairro" placeholder="Bairro" value={endereco.bairro} onChange={handleChange}/>
+                <input className="rounded-md border border-gray-300 px-3 py-2 text-sm" type="text" name="cidade" placeholder="Cidade" value={endereco.cidade}onChange={handleChange}/>
+                <input className="rounded-md border border-gray-300 px-3 py-2 text-sm" type="text" name="estado" placeholder="Estado" value={endereco.estado} onChange={handleChange}/>
             </form>
     </div>
   );
