@@ -75,6 +75,6 @@ export default function HomeCep() {
                 <input className="rounded-md border border-gray-300 px-3 py-2 text-sm" type="text" name="cidade" placeholder="Cidade" value={endereco.cidade}onChange={handleChange}/>
                 <input className="rounded-md border border-gray-300 px-3 py-2 text-sm" type="text" name="estado" placeholder="Estado" value={endereco.estado} onChange={handleChange}/>
             </form>
-    </div>
-  );
+        </div>
+    );
 }
